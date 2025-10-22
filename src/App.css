@@ -165,3 +165,17 @@
   box-shadow: none;
   background-color: #db4455;
 }
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  .gameSection {
+    width: 100%;
+    margin: 0;
+  }
+  .item-icon {
+    font-size: 70px;
+  }
+}
