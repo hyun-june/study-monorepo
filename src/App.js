@@ -38,7 +38,6 @@ function App() {
     navigator.geolocation.getCurrentPosition((position) => {
       let lat = position.coords.latitude;
       let lon = position.coords.longitude;
-      console.log("현재 위치", lat, lon);
       getWeatherApi(lat, lon);
       setSelectCity("city");
     });
@@ -52,9 +51,7 @@ function App() {
       const data = await response.json();
       setWeather(data);
       setLoading(false);
-      console.log("weatherData", data);
     } catch (error) {
-      console.log("api error", error.message);
       setLoading(false);
     }
   };
@@ -68,7 +65,6 @@ function App() {
       setWeather(data);
       setLoading(false);
     } catch (error) {
-      console.log("city error", error.message);
       setLoading(false);
     }
   };

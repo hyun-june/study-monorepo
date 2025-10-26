@@ -63,3 +63,19 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 500px) {
+  body {
+    background: none;
+  }
+
+  .container {
+    background-color: beige;
+  }
+
+  .weather-box {
+    width: 300px;
+    padding: 40px;
+    font-size: 24px;
+  }
+}
