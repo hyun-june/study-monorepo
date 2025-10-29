@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { authenciateAction } from "../redux/actions/authenciateAction";
+import { authenticateAction } from "../redux/actions/authenticateAction";
 
 const Navbar = () => {
   const menuList = [
@@ -24,7 +24,7 @@ const Navbar = () => {
     "제품",
     "최신 & 트렌딩",
   ];
-  const authenciate = useSelector((state) => state.auth.authenciate); // true면 로그인 상태, false면 비로그인 상태
+  const authenticate = useSelector((state) => state.auth.authenticate); // true면 로그인 상태, false면 비로그인 상태
   const [toogleSearch, setToogleSearch] = useState(false);
   const [sideOpen, setSideOpen] = useState(false);
 
@@ -43,8 +43,8 @@ const Navbar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const goToLogin = () => {
-    if (authenciate) {
-      dispatch(authenciateAction.logout());
+    if (authenticate) {
+      dispatch(authenticateAction.logout());
     } else {
       navigate("/login");
     }
@@ -64,7 +64,7 @@ const Navbar = () => {
     }
   };
 
-  const signInfo = authenciate ? "logout" : "";
+  const signInfo = authenticate ? "logout" : "";
 
   return (
     <div>
