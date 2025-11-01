@@ -1,13 +1,13 @@
 import "./App.css";
 import counterStore from "./stores/counterStore";
-import numberStore from "./stores/numberStore";
+// import numberStore from "./stores/numberStore";
 
 function App() {
   const { count, increase, decrease, increaseBy, decreaseBy, reset } =
     counterStore();
-  const { num, text, numSelect, numReset, textSelect, prevNum } = numberStore();
-  const numberList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  const textList = ["+", "-", "x", "÷", "="];
+  // const { num, text, numSelect, numReset, textSelect, prevNum } = numberStore();
+  // const numberList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  // const textList = ["+", "-", "x", "÷", "="];
 
   return (
     <div className="container">
