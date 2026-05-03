@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "GabiaSai";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2510-1@1.0/GabiaSai-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SchoolSafetyCertificate";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2510-1@1.0/HakgyoansimSangjangR.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+    format("woff");
+  font-weight: 100;
+  font-display: swap;
+}
+
+@theme {
+  --text-green: #11785f;
+  --text-gray: #6c757d;
+  --text-black-sub: #2a2a2a;
+
+  --bg-red: #f94148;
+  --bg-main: #fffbf0;
+
+  --font-main: "SchoolSafetyCertificate";
+  --font-sub: "Pretendard";
+  --font-title: "GabiaSai";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--bg-main);
+}
