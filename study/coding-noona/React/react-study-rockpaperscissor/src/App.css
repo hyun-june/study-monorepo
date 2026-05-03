@@ -1,0 +1,181 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #dfd3c3;
+}
+
+.gameSection {
+  text-align: center;
+  margin-top: 4%;
+  width: 55%;
+  height: 85%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: white;
+  border-radius: 50px;
+  position: relative;
+}
+
+.scoreBoard {
+  display: flex;
+  justify-content: center;
+}
+
+.score {
+  font-size: 50px;
+}
+
+@keyframes game {
+  0% {
+    color: red;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.gameResult {
+  font-size: 40px;
+  position: absolute;
+  left: 50%;
+  animation: game 1s infinite;
+  top: 40%;
+  z-index: 10;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  transform: translateX(-50%);
+}
+
+.result_box {
+  position: relative;
+}
+
+.result_message {
+  font-size: 12px;
+  color: black;
+  position: absolute;
+  top: -10%;
+  right: 0;
+}
+
+.result_wrapper {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  opacity: 0.5;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.box {
+  border-top: 2px dashed lightgray;
+  border-bottom: 2px dashed lightgray;
+  width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.box.User::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0; /* 전체 높이를 설정하여 점선이 박스 전체를 커버하도록 함 */
+  right: 0; /* 좌측에 위치시키기 위해 */
+  width: 2px; /* 점선의 두께를 설정 */
+  border-left: 2px dashed lightgray; /* 점선 효과를 설정 */
+}
+
+.item-icon {
+  font-size: 200px;
+  text-align: center;
+  color: black;
+}
+
+.win {
+  color: green;
+}
+
+.lose {
+  color: red;
+}
+
+.tie {
+  color: black;
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  transition-duration: 0.3s;
+  margin: 1rem;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.btn:active {
+  margin-right: 5px;
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.scissors {
+  box-shadow: 5px 5px 5px green;
+}
+
+.rock {
+  box-shadow: 5px 5px 5px blue;
+}
+
+.paper {
+  box-shadow: 5px 5px 5px #f05650;
+}
+
+.btn-reset {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  border: 1px dashed darksalmon;
+  box-shadow: 3px 3px 3px darksalmon;
+  transition-duration: 0.3s;
+  z-index: 999;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn-reset:active {
+  transform: translateY(3px);
+  margin-left: 5px;
+  box-shadow: none;
+  background-color: #db4455;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  .gameSection {
+    width: 100%;
+    margin: 0;
+  }
+  .item-icon {
+    font-size: 70px;
+  }
+}
